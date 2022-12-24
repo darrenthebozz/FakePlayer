@@ -1,0 +1,3 @@
+displayName = Fake Player
+author = Darrenthebozz
+version = 0.1

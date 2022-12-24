@@ -1,0 +1,3 @@
+This mod allows you to spawn Players as your own personal victims
+
+Useful for the friendless ._.

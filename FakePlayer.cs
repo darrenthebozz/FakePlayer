@@ -130,8 +130,8 @@ namespace FakePlayer
         {
             if (player.whoAmI != Main.LocalPlayer.whoAmI)
                 return false;
-            if (ModContent.GetInstance<FakePlayerUISystem>().userInterface.CurrentState != null)
-                return false;
+            //if (ModContent.GetInstance<FakePlayerUISystem>().userInterface.CurrentState != null)
+            //    return false;
             Player? currentFakePlayer = IsCursorTouchingFakePlayer();
             if (currentFakePlayer != null)
             {

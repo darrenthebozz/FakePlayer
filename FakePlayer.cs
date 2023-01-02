@@ -9,6 +9,7 @@ using Terraria.UI;
 using Terraria.GameContent.UI.Elements;
 using Terraria.IO;
 using System.Reflection;
+using Terraria.GameContent.UI.States;
 
 /* If you are reading this prepare for a horror show of programming
  * It was also built with popsicle sticks so it could fall apart
@@ -16,6 +17,7 @@ using System.Reflection;
  */
 /* TODO
  * Make players killable
+ * Make players hair light up in ui
  */
 /* We added
  * Fix GUI visual bug x
@@ -194,7 +196,10 @@ namespace FakePlayer
         public UIPlayerPanel(PlayerFileData playerFileData)
         {
             player = playerFileData.Player;
-            uICharacter = new UICharacter((Player)typeof(Player).GetMethod("MemberwiseClone", BindingFlags.NonPublic | BindingFlags.Instance).Invoke(playerFileData.Player, null), true, true); //copy player object shallowly?
+            Player fakePlayer = new Player();
+            fakePlayer.position = new Vector2(Main.maxTilesX * 16 / 2, Main.maxTilesY * 16 / 2);
+            fakePlayer.CopyVisuals(playerFileData.Player);
+            uICharacter = new UICharacter(fakePlayer, false, true);
             uICharacter.OnDoubleClick += DoubleClick;
             Append(uICharacter);
 
@@ -231,7 +236,7 @@ namespace FakePlayer
             if (selectedUIPlayerPanel == this)
                 return;
             BackgroundColor = new Color(63, 82, 151) * 0.7f;
-            BorderColor = new Color(89, 116, 213) * 0.7f;
+            //BorderColor = new Color(89, 116, 213) * 0.7f;
         }
         public override void Update(GameTime gameTime)
         {

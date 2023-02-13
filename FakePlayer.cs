@@ -11,23 +11,6 @@ using Terraria.IO;
 using System.Reflection;
 using Terraria.GameContent.UI.States;
 
-/* If you are reading this prepare for a horror show of programming
- * It was also built with popsicle sticks so it could fall apart
- * You've been warned...
- */
-/* TODO
- * Make players killable
- * Make players hair light up in ui
- */
-/* We added
- * Fix GUI visual bug x
- * Tell user which player is currently selected using green overlay of player x
- * multiple player creation and deletion
- * hovering the cursor over a fake player allows you to move them or remove them
- * Add multiple players to the FakePlayer Item
- * Hold player to select Right click and Hold to delete
- * GUI to customize player that is bound to mouse3
- */
 namespace FakePlayer
 {
     public class FakePlayerMod : Mod

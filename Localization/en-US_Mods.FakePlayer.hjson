@@ -1,0 +1,8 @@
+"Keybinds.Fake Player UI.DisplayName": Fake  Player  U I
+
+Items: {
+	FakePlayerItem: {
+		DisplayName: Fake Player Item
+		Tooltip: ""
+	}
+}

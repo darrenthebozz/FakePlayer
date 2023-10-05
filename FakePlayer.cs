@@ -21,11 +21,11 @@ using Terraria.IO;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.UI;
-using System.Collections;
-using Terraria.GameContent.Creative;
-using System.IO;
-using ReLogic.Content;
-using System.Xml.Linq;
+using Terraria.GameContent.UI.Elements;
+using Terraria.IO;
+using System.Reflection;
+using Terraria.GameContent.UI.States;
+
 /* If you are reading this prepare for a horror show of programming
  * It was also built with popsicle sticks so it could fall apart
  * You've been warned...
